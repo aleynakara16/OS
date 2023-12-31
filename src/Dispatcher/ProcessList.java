@@ -15,10 +15,10 @@ import java.util.Iterator;
 
 public class ProcessList {
 
-	public List<ProcessManagement> processes = new ArrayList<ProcessManagement>();//Dosyadan okunan proseslerin tutulacaðý bir proses listesi oluþturulur
+	public List<ProcessManagement> processes = new ArrayList<ProcessManagement>();//Dosyadan okunan proseslerin tutulacaÃ°Ã½ bir proses listesi oluÃ¾turulur
 
 	public ProcessList() throws IOException{
-		int id = 0;
+		int id = 0; 
 		File file =new File("giris.txt");	
 		
 		String line;
@@ -26,10 +26,10 @@ public class ProcessList {
 		
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		
-		while ((line = bufferedReader.readLine())!= null) {//dosyayý satýr satýr okur
+		while ((line = bufferedReader.readLine())!= null) {//dosyayÃ½ satÃ½r satÃ½r okur
 			String[] array= line.split(", ");
 			
-			for (int i=0;i<array.length;i++) {//Okunan dosyadaki bilgileri prosesin ilgili deðerlerine atar
+			for (int i=0;i<array.length;i++) {//Okunan dosyadaki bilgileri prosesin ilgili deÃ°erlerine atar
 				ProcessManagement p = new ProcessManagement();
 				p.id = id++;
 				p.arrivalTime = Integer.parseInt(array[i]);
