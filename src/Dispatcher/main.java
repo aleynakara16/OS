@@ -17,23 +17,23 @@ import java.util.TimerTask;
 public class main {
 	
 	static int second=-1;
-	static ProcessManagement pm = new ProcessManagement();//Yeni bir proses yöneticisi oluşturulur
+	static ProcessManagement pm = new ProcessManagement();//Yeni bir proses yÃ¶neticisi oluÃ¾turulur
 	
 	public static void main(String[] args) throws IOException {
 		
 		Scanner scanner = new Scanner(System.in);
-	    while (true) {//komut girişi yapılana kadar tekrar çalıştırılır
+	    while (true) {//komut giriÃ¾i yapÃ½lana kadar tekrar Ã§alÃ½Ã¾tÃ½rÃ½lÃ½r
 
 	      System.out.print(">Systemd ");
 	      String input = scanner.nextLine();
 	      String[] tokens = input.split("\s+");
 	      String command = tokens[0];
-	      switch (command) {//girilen komuta göre doğru komutsa program çalıştırılır yanlışsa hata mesajı yazdırılır
+	      switch (command) {//girilen komuta gÃ¶re doÃ°ru komutsa program Ã§alÃ½Ã¾tÃ½rÃ½lÃ½r yanlÃ½Ã¾sa hata mesajÃ½ yazdÃ½rÃ½lÃ½r
 	        case "giris.txt":
-	            DispatcherShell duty = new DispatcherShell();//Yeni bir görevlendirici oluşturulur
-	    		duty.processRun(pm);//görevlendirici programı başlatır
+	            DispatcherShell duty = new DispatcherShell();//Yeni bir gÃ¶revlendirici oluÃ¾turulur
+	    		duty.processRun(pm);//gÃ¶revlendirici programÃ½ baÃ¾latÃ½r
 	          break;
-	        default:
+		      default:
 	            System.out.println("Unrecognized command: " + command);
 	          break;
 	      }
