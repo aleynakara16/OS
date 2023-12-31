@@ -1,3 +1,4 @@
+
 package Dispatcher;
 
 public class Color {
